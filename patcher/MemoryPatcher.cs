@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -189,6 +189,11 @@ namespace HitmanPatcher
 					patches.AddRange(v.dynres_noforceoffline);
 				}
 
+                if  (patchOptions.DisableSteamCheck)
+                {
+                    patches.AddRange(v.steamcheck);
+                }
+
 				foreach (Patch patch in patches)
 				{
 					byte[] dataToWrite = patch.patch;
@@ -276,6 +281,7 @@ namespace HitmanPatcher
 			public string CustomConfigDomain;
 			public bool UseHttp;
 			public bool DisableForceOfflineOnFailedDynamicResources;
+            public bool DisableSteamCheck;
         }
 
 		public static UInt32 getTimestamp(IntPtr hProcess, IntPtr baseAddress)

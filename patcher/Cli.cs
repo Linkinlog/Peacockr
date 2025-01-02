@@ -38,6 +38,8 @@ namespace HitmanPatcher
 
             internal bool OptionalDynRes { get; set; }
 
+            internal bool PatchSteam { get; set; }
+
             [SuppressMessage("ReSharper", "LocalizableElement")]
             internal static CliOptions FromArguments(string[] args)
             {
@@ -46,7 +48,8 @@ namespace HitmanPatcher
                     Domain = "127.0.0.1",
                     Headless = false,
                     OptionalDynRes = true,
-                    UseHttp = true
+                    UseHttp = true,
+                    PatchSteam = true,
                 };
 
                 var i = 0;
@@ -76,6 +79,9 @@ namespace HitmanPatcher
                         case "--use-http":
                             options.UseHttp = true;
                             break;
+                        case "--patch-steam":
+                            options.PatchSteam = true;
+                            break;
                         case "--help":
                             Console.WriteLine(CliLocale.HelpHeader);
                             Console.WriteLine("");
@@ -84,6 +90,7 @@ namespace HitmanPatcher
                             Console.WriteLine($"  --optional-dynamic-resources : {CliLocale.OptionalDynResDescription}");
                             Console.WriteLine($"  --domain <url> : {CliLocale.DomainDescription}");
                             Console.WriteLine($"  --use-http : {CliLocale.UseHttpDescription}");
+                            Console.WriteLine($"  --patch-steam : {CliLocale.PatchSteamDescription}");
                             Environment.Exit(0);
                             break;
                     }
