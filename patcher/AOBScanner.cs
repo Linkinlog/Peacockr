@@ -540,7 +540,7 @@ namespace HitmanPatcher
 
         private static Task<Patch[]> findSteamCheck(byte[] data)
         {
-
+            Console.WriteLine("SteamCheck");
             return Task.Factory.ContinueWhenAll(new[]
             {
                 Task.Factory.StartNew(() =>

@@ -49,7 +49,7 @@ namespace HitmanPatcher
                     Headless = false,
                     OptionalDynRes = true,
                     UseHttp = true,
-                    PatchSteam = true,
+                    PatchSteam = true
                 };
 
                 var i = 0;

@@ -23,7 +23,7 @@ namespace HitmanPatcher
                 AlwaysSendAuthHeader = true,
                 SetCustomConfigDomain = true,
                 DisableForceOfflineOnFailedDynamicResources = true,
-                DisableSteamCheck = true,
+                DisableSteamCheck = true
             };
             darkModeEnabled = false;
             startInTray = false;

@@ -63,7 +63,7 @@ namespace HitmanPatcher
                         DisableCertPinning = true,
                         SetCustomConfigDomain = true,
                         AlwaysSendAuthHeader = true,
-                        DisableSteamCheck = true,
+                        DisableSteamCheck = true
                     },
                     darkModeEnabled = darkModeBox.Checked,
                     startInTray = startInTray,
